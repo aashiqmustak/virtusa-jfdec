@@ -15,4 +15,6 @@ class Settings:
     llm_retries: int = int(os.getenv('LLM_RETRIES', '1'))
     max_upload: int = 10 * 1024 * 1024
     max_pages: int = 50
+    cors_origins: str = os.getenv('CORS_ORIGINS', 'http://localhost:5173,http://localhost:8080')
 settings = Settings()
+

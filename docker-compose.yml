@@ -29,7 +29,9 @@ services:
       LLM_RETRIES: ${LLM_RETRIES:-1}
       DOCUMENT_TIMEOUT: ${DOCUMENT_TIMEOUT:-90}
       POLICY_FILE: /workspace/policy.demo.json
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://localhost:8080}
     ports: ["127.0.0.1:8000:8000"]
+
     extra_hosts: ["host.docker.internal:host-gateway"]
     volumes:
       - uploads:/data/uploads
