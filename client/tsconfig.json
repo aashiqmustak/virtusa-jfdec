@@ -12,11 +12,9 @@
       "DOM"
     ],
     "skipLibCheck": true,
-    "types": [
-      "vite/client"
-    ],
     "noEmit": true
   },
+
   "include": [
     "src/**/*.ts",
     "src/**/*.vue",
