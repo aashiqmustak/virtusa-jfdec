@@ -5,3 +5,10 @@ description = "@mohammedaashiq"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = []
+
+[tool.pyright]
+extraPaths = ["server"]
+
+[tool.pytest.ini_options]
+pythonpath = ["server"]
+
