@@ -8,4 +8,5 @@ COPY fixtures /workspace/fixtures
 COPY policy.demo.json /workspace/policy.demo.json
 RUN useradd --create-home desk && mkdir -p /data/uploads && chown -R desk:desk /data /workspace
 USER desk
-CMD ["python","-m","uvicorn","app.main:app","--host","0.0.0.0","--port","8000","--workers","1"]
+CMD ["sh", "-c", "python -m uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000} --workers 1"]
+
